@@ -11,43 +11,53 @@ PS1="[%F{#ebbcba}%B%n%b%f %1~] "
 # Aliases and Keybinds
 # ====================
 
-#temp
-alias wpa="sudo wpa_supplicant -iwlp8s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp8s0.conf -B"
-
-
 # Portage
 alias nflag="sudo -E nvim /etc/portage/package.use/flags"
 alias nmask="sudo -E nvim /etc/portage/package.accept_keywords/accept_words"
 alias nlicense="sudo -E nvim /etc/portage/package.license"
-# Sysytem
-alias sleep="loginctl suspend"
-alias restart="loginctl reboot"
-	#alias dim1="wlsunset SIGUSR1 -T 5500 -g 0.95"
-	#alias dim2="wlsunset SIGUSR1 -T 5000 -g 0.95"
-	#alias dim3="wlsunset SIGUSR1 -T 4500 -g 0.95"
 
-#   Program
+
+# NixOS
+alias nixc="sudo -E nvim /etc/nixos/configuration.nix"
+alias cnix="nvim $HOME/.config/nix/nix.conf"
+alias nixs="nix search nixpkgs"
+alias nr="sudo nixos-rebuild switch"
+alias nru="sudo nixos-rebuild switch --upgrade"
+alias usr-pkgs="nixos-option users.users.autumn.packages | grep"
+alias sys-pkgs="nixos-option environment.systemPackages | grep"
+
+
+# Sysytem
+alias sleep="systemctl suspend"
+alias restart="systemctl reboot"
+alias sfonts="fc-list : family | grep"
+alias lfonts="fc-list : family"
+
+
+# Programs
 alias snvim="sudo -E nvim"
-alias grep="grep --color"
+alias grep="grep --color --ignore-case"
 alias mpv90="mpv --vf=rotate=90"
-alias nroot="sudo -E nvim /"
 alias ff="fastfetch"
 
 # Configs
-alias yconf="yazi $HOME/.config/"
-
-alias nvimc="nvim +'Telescope find_files cwd=$HOME/.config/nvim/'"
 alias keydc="sudo -E nvim /etc/keyd/default.conf"
-
-alias swayc="nvim $HOME/.config/sway/"
-alias hyprc="nvim $HOME/.config/hypr/hyprland.conf"
-alias waybarc="nvim $HOME/.config/waybar/config.jsonc"
+alias zshc="nvim $HOME/.zshrc"
 
 alias footc="nvim $HOME/.config/foot/foot.ini"
-alias ghostc="nvim $HOME/.config/ghostty/config"
-alias zshc="nvim $HOME/.zshrc"
+alias nvimc="nvim +'Telescope find_files cwd=$HOME/.config/nvim/'"
 alias zellijc="nvim $HOME/.config/zellij/config.kdl"
+
+alias hyprc="nvim $HOME/.config/hypr/hyprland.conf"
+alias waybarc="nvim $HOME/.config/waybar/config.jsonc"
 alias rofic="nvim $HOME/.config/rofi/config.rasi"
+
+# Scripts
+alias nsh="nvim ~/sync/linux_config/scripts/"
+#   copies all config files to a central location and pushes to github
+alias syncc="~/sync/linux_config/scripts/sync.sh"
+#   download files from github using curl
+alias clonec="~/sync/linux_config/scripts/clone.sh"
 
 
 # =========
@@ -74,7 +84,7 @@ HISTFILE=~/.cache/zsh/history/
 # _comp_options+=(globdots)
 
 
-# Vim Motions
+# Vim Keybinds
 bindkey -v
 export KEYTIMEOUT=1
 

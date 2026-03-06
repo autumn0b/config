@@ -1,7 +1,7 @@
 configuration {
 	display-drun: "";
 	modi: "drun,run";
-	font: "Monofur 18";
+	font: "Monofur Nerd Font Mono 18";
 	show-icons: true;
 }
 

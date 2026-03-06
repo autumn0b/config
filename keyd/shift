@@ -1,0 +1,15 @@
+# Row 0
+tab = ~
+
+# Row 1
+[ = \
+] = `
+
+# Row 2
+capslock = esc
+; = "
+' = esc
+
+# Row 3
+shift = clear()
+/ = ;

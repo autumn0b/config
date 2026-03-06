@@ -1,0 +1,18 @@
+# Row 0
+
+# Row 1
+tab = layer(ctrl_left)
+[ = /
+] = layer(ctrl_right)
+
+# Row 2
+capslock = layer(token_left)
+; = '
+' = layer(token_right)
+
+# Row 3
+shift = layer(shift)
+/ = :
+
+# Row 4
+rightalt = layer(alt)
