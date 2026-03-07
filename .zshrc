@@ -34,6 +34,16 @@ alias sfonts="fc-list : family | grep"
 alias lfonts="fc-list : family"
 
 
+# git
+#   git add .
+#   git commit -m "<msg>"
+#   git push
+#
+#   ssh-keygen -t ed25519 -C "your_email@example.com"
+#   git remote set-url origin <repo_link>
+alias cdconf="cd ~/sync/linux_config/"
+
+
 # Programs
 alias snvim="sudo -E nvim"
 alias grep="grep --color --ignore-case"
@@ -45,7 +55,8 @@ alias keydc="sudo -E nvim /etc/keyd/default.conf"
 alias zshc="nvim $HOME/.zshrc"
 
 alias footc="nvim $HOME/.config/foot/foot.ini"
-alias nvimc="nvim +'Telescope find_files cwd=$HOME/.config/nvim/'"
+alias ghostc="nvim $HOME/.config/ghostty/config"
+alias nvimc="nvim $HOME/.config/nvim/init.lua"
 alias zellijc="nvim $HOME/.config/zellij/config.kdl"
 
 alias hyprc="nvim $HOME/.config/hypr/hyprland.conf"
@@ -54,6 +65,7 @@ alias rofic="nvim $HOME/.config/rofi/config.rasi"
 
 # Scripts
 alias nsh="nvim ~/sync/linux_config/scripts/"
+alias cdsh="cd ~/sync/linux_config/scripts/"
 #   copies all config files to a central location and pushes to github
 alias syncc="~/sync/linux_config/scripts/sync.sh"
 #   download files from github using curl

@@ -63,6 +63,7 @@
 			# core
 			home-manager
 			keyd
+			udiskie
 
 			# environment
 			waybar
@@ -76,11 +77,11 @@
 			xlsclients
 			tealdeer
 			unzip
-			udiskie
 
 			# terminal apps
 			neovim
 			foot
+			ghostty
 			zellij
 			zsh
 			yazi
@@ -89,6 +90,7 @@
 			firefox
 			discord
 			pinta
+			xfce.thunar
 			ardour
 			reaper
 
@@ -128,6 +130,7 @@
 	# enable services
 	services.keyd.enable = true;
 	services.openssh.enable = true;
+	services.udisks2.enable = true;
 
 	# Open ports in the firewall.
 	# networking.firewall.allowedTCPPorts = [ ... ];
