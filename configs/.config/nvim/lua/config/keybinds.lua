@@ -35,8 +35,8 @@ vim.keymap.set("n", "<leader>d", function()
 	MiniFiles.open(vim.api.nvim_buf_get_name(0), true)
 	-- MiniFiles.open(MiniFiles.get_latest_path())
 end)
-vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
-vim.keymap.set("n", "<leader>Q", "<cmd>bd!<cr>")
+vim.keymap.set("n", "<leader>w", "<cmd>bd<cr>")
+vim.keymap.set("n", "<leader>W", "<cmd>bd!<cr>")
 
 
 -- Tabline navigation

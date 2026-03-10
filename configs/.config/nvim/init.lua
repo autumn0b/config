@@ -5,7 +5,7 @@ vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
 
 -- General Neovim API config
-require("config.remap")
+require("config.keybinds")
 require("config.options")
 
 -- Plugins

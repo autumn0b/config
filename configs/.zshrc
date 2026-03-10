@@ -2,16 +2,23 @@
 # m | host name
 # 1~ | cwd, tilde is displayed for /home/<user>
 #	Red name
-PS1="[%F{#f0a6cc}%B%n%b%f %1~] "
 PS1="[%F{#ebbcba}%B%n%b%f %1~] "
-#PS1="[%F{#d84f76}%B%n%b%f %1~] "
+
 
 
 # ====================
 # Aliases and Keybinds
 # ====================
 
-# Portage
+
+# Arch
+alias paci="sudo pacman -S"  # [i]nstall
+alias pacr="sudo pacman -Rns"  # [r]emove
+alias pacs="pacman -Ss"      # [s]earch
+alias pacsl="pacman -Q"      # [s]earch [l]ocal
+
+
+# Gentoo
 alias nflag="sudo -E nvim /etc/portage/package.use/flags"
 alias nmask="sudo -E nvim /etc/portage/package.accept_keywords/accept_words"
 alias nlicense="sudo -E nvim /etc/portage/package.license"
@@ -27,21 +34,15 @@ alias usr-pkgs="nixos-option users.users.autumn.packages | grep"
 alias sys-pkgs="nixos-option environment.systemPackages | grep"
 
 
+# Hyprland
+alias hyprq="hyprctl dispatch exit"
+alias hyprs="start-hyprland"
+
 # Sysytem
 alias sleep="systemctl suspend"
 alias restart="systemctl reboot"
 alias sfonts="fc-list : family | grep"
 alias lfonts="fc-list : family"
-
-
-# git
-#   git add .
-#   git commit -m "<msg>"
-#   git push
-#
-#   ssh-keygen -t ed25519 -C "your_email@example.com"
-#   git remote set-url origin <repo_link>
-alias cdconf="cd ~/sync/linux_config/"
 
 
 # Programs
@@ -63,13 +64,18 @@ alias hyprc="nvim $HOME/.config/hypr/hyprland.conf"
 alias waybarc="nvim $HOME/.config/waybar/config.jsonc"
 alias rofic="nvim $HOME/.config/rofi/config.rasi"
 
+
+# Directories
+alias cdconf="cd ~/sync/linux_config/"
+
+
 # Scripts
 alias nsh="nvim ~/sync/linux_config/scripts/"
 alias cdsh="cd ~/sync/linux_config/scripts/"
 #   copies all config files to a central location and pushes to github
-alias syncc="~/sync/linux_config/scripts/sync.sh"
+alias savec="~/sync/linux_config/scripts/save.sh"
 #   download files from github using curl
-alias clonec="~/sync/linux_config/scripts/clone.sh"
+alias loadc="~/sync/linux_config/scripts/load.sh"
 
 
 # =========
@@ -128,3 +134,21 @@ zle -N zle-line-init
 echo -ne "\e[5 q"
 # Use beam cursor for each new prompt.
 preexec() { echo -ne "\e[5 q" ;}
+
+
+# =====
+# @Notes
+# =====
+
+# @git
+# ----
+#   git add .
+#   git commit -m "<msg>"
+#   git push
+#
+#   ssh-keygen -t ed25519 -C "your_email@example.com"
+#   git remote set-url origin <repo_link>
+
+# @reaper
+# ':' : keybaord shortcuts menu
+# ctrl + left click drag : create midi item

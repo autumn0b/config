@@ -2,7 +2,7 @@
 tab = ~
 
 # Row 1
-[ = \
+[ = ;
 ] = `
 
 # Row 2
@@ -12,4 +12,4 @@ capslock = esc
 
 # Row 3
 shift = clear()
-/ = ;
+/ = \
