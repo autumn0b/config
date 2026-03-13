@@ -12,10 +12,11 @@ PS1="[%F{#ebbcba}%B%n%b%f %1~] "
 
 
 # Arch
-alias paci="sudo pacman -S"  # [i]nstall
+alias paci="sudo pacman -S"    # [i]nstall
 alias pacr="sudo pacman -Rns"  # [r]emove
-alias pacs="pacman -Ss"      # [s]earch
-alias pacsl="pacman -Q"      # [s]earch [l]ocal
+alias pacs="pacman -Sp --print-format %r/%n"     # [s]earch
+alias pacsl="pacman -Q"                          # [s]earch [l]ocal
+alias paco="pacman -Sp --print-format '%n : %O'" # [o]ptional dependencies
 
 
 # Gentoo
@@ -47,12 +48,15 @@ alias lfonts="fc-list : family"
 
 # Programs
 alias snvim="sudo -E nvim"
+alias nvimu="$HOME/.config/nvim/update_plugins.sh"
 alias grep="grep --color --ignore-case"
 alias mpv90="mpv --vf=rotate=90"
 alias ff="fastfetch"
 
 # Configs
+alias pkgs="nvim $HOME/sync/linux_config/scripts/packages.md"
 alias keydc="sudo -E nvim /etc/keyd/default.conf"
+alias wpac="sudo -E nvim /etc/wpa_supplicant/wpa_supplicant.conf"
 alias zshc="nvim $HOME/.zshrc"
 
 alias footc="nvim $HOME/.config/foot/foot.ini"
@@ -61,12 +65,18 @@ alias nvimc="nvim $HOME/.config/nvim/init.lua"
 alias zellijc="nvim $HOME/.config/zellij/config.kdl"
 
 alias hyprc="nvim $HOME/.config/hypr/hyprland.conf"
-alias waybarc="nvim $HOME/.config/waybar/config.jsonc"
+alias bgc="nvim $HOME/.config/hypr/hyprpaper.conf"
+alias waybarc="nvim $HOME/.config/waybar/style.css"
 alias rofic="nvim $HOME/.config/rofi/config.rasi"
 
 
 # Directories
 alias cdconf="cd ~/sync/linux_config/"
+
+alias notes="nvim ~/sync/notes/notes.txt"
+alias notepad="nvim ~/sync/notes/notepad.txt"
+
+alias ncode="nvim $HOME/sync/proj_code/pacfile.c"
 
 
 # Scripts
@@ -136,19 +146,3 @@ echo -ne "\e[5 q"
 preexec() { echo -ne "\e[5 q" ;}
 
 
-# =====
-# @Notes
-# =====
-
-# @git
-# ----
-#   git add .
-#   git commit -m "<msg>"
-#   git push
-#
-#   ssh-keygen -t ed25519 -C "your_email@example.com"
-#   git remote set-url origin <repo_link>
-
-# @reaper
-# ':' : keybaord shortcuts menu
-# ctrl + left click drag : create midi item

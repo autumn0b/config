@@ -2,15 +2,12 @@ vim.cmd("filetype plugin off")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.g.have_nerd_font = true
 
--- General Neovim API config
-require("config.keybinds")
-require("config.options")
+require('keybinds.general')
+require('keybinds.mini_files')
+require('keybinds.mini_tabline')
 
--- Plugins
-require("config.lazy")          -- Community
-require("personal.notepad")     -- Personal
-require("personal.diagnostics") -- Personal
-
-vim.cmd.colorscheme "duskfox"
+require('keybinds.mini_move')
+local statusline = require("mini.statusline")
+statusline.setup({ use_icons = vim.g.have_nerd_font })
+require('options')
