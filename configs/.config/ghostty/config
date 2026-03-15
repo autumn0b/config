@@ -7,8 +7,9 @@
 theme = Rose Pine Moon
 background-opacity = 0.75
 
-font-family = monofur
-font-size = 16
+# font-family = monofur
+font-family = JetBrainsMono NFM
+font-size = 12
 
 
 # ========
