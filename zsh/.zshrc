@@ -1,9 +1,8 @@
 # ====== #
 
-source ~/sync/config/zsh/functions.zsh
-source ~/sync/config/zsh/aliases.zsh
-source ~/sync/config/zsh/conf.zsh
-source ~/sync/config/zsh/nvim.zsh
+source $HOME/sync/config/zsh/functions.zsh
+source $HOME/sync/config/zsh/aliases.zsh
+source $HOME/sync/config/zsh/nvim.zsh
 
 
 # ======= #

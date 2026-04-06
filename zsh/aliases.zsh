@@ -1,3 +1,11 @@
+fkit() {
+	if [[ "$1" == p ]]; then
+		$HOME/sync/code/scripts/fabrikit/pacfile.sh
+	elif [[ "$1" == l ]]; then
+		$HOME/sync/code/scripts/fabrikit/clink.sh
+	fi
+}
+
 # Arch
 alias paci="sudo pacman -S"    # [i]nstall
 alias pacu="sudo pacman -Syu"  # [u]pdate
@@ -51,7 +59,7 @@ alias hypr="start-hyprland"
 alias notepad="nvim $HOME/sync/text/notepad.txt"
 alias code="nvim $HOME/sync/code/"
 alias pkgs="nvim $HOME/sync/code/scripts/packages.md"
-alias configs="nvim $HOME/.config/clink/configs.txt"
+alias configs="nvim $HOME/.config/fabrikit/links.conf"
 
 
 # Configs
